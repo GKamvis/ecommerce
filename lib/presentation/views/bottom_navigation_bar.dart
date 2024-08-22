@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:myapp/presentation/views/Product_page/products_page.dart';
+import 'package:myapp/presentation/views/Cart_page/cart_page.dart';
+import 'package:myapp/presentation/views/Products_page/products_page.dart';
 import 'package:myapp/presentation/views/Profile_page/profile_page.dart';
 import 'package:myapp/presentation/views/Search_page/search_page.dart';
 import '../cubit/navigation_cubits/navigation_bloc.dart';
@@ -15,6 +16,7 @@ class MyBottomNavigation extends StatelessWidget {
     const HomePage(),
      SearchPage(),
     const ProductsPage(),
+    const CartPage(),
     const ProfilePage(),
   ];
   @override
@@ -35,7 +37,9 @@ class MyBottomNavigation extends StatelessWidget {
                 BottomNavigationBarItem(icon: Icon(CupertinoIcons.house), label: 'Home'),
                 BottomNavigationBarItem(icon: Icon(CupertinoIcons.search), label: 'Search'),
                 BottomNavigationBarItem(icon: Icon(CupertinoIcons.bag), label: 'Product'),
+                BottomNavigationBarItem(icon: Icon(CupertinoIcons.cart), label: 'Cart'),
                 BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), label: 'Profile'),
+
               ],
               currentIndex: state.selectedIndex,
               onTap: (index) {

@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/presentation/views/Product_page/Product_pafe_widgets/my_products.dart';
+import 'package:myapp/presentation/views/Products_page/Product_pafe_widgets/my_products.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({super.key});
@@ -12,7 +11,7 @@ class ProductsPage extends StatelessWidget {
         
         title: const Text('Products'),
       ),
-      body: MyProducts()
+      body: const MyProducts()
     );
   }
 }

@@ -21,14 +21,14 @@ class ProfilePageUserInfo extends StatelessWidget {
 
                   // name
 
-                  Text(
+                  const Text(
                     "Feli Bağlama ",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
 
                   // email
 
-                  Text('quvvətləndirici@ədat.da'),
+                  const Text('quvvətləndirici@ədat.da'),
                 ],
               ),
             );

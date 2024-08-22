@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/presentation/views/Orders_page/orders.dart';
 import 'package:myapp/presentation/views/Profile_page/Profile_pages_widgets/Profile_page_tabs.dart';
 
 import 'Profile_pages_widgets/Profile_page_user_info.dart';
@@ -14,7 +15,7 @@ class ProfilePage extends StatelessWidget {
         body: Column(
           children: [
             // image
-          ProfilePageUserInfo(),
+            const ProfilePageUserInfo(),
 
             ProfilePageTabs(
               leadingIcon: CupertinoIcons.person_fill,
@@ -32,13 +33,25 @@ class ProfilePage extends StatelessWidget {
               leadingIcon: Icons.share,
               text: 'Share App',
             ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => const OrdersPage() , ));
+              },
+              child: ProfilePageTabs(
+                leadingIcon: CupertinoIcons.cart_fill,
+                text: 'Orders',
+              ),
+            ),
 
-            SizedBox(height: 70,),
-
-
-            Text("Sign Out" , style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold , color: const Color.fromRGBO(245,95,31 , 1)),),
+            const Text(
+              "Sign Out",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromRGBO(245, 95, 31, 1)),
+            ),
           ],
-          
         ));
   }
 }

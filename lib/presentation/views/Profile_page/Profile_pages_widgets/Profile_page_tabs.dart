@@ -1,11 +1,13 @@
+// ignore: file_names
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ProfilePageTabs extends StatelessWidget {
   final leadingIcon;
   String text;
 
-  ProfilePageTabs({required this.leadingIcon, required this.text});
+  ProfilePageTabs({super.key, required this.leadingIcon, required this.text});
 
 
   @override
@@ -28,13 +30,13 @@ class ProfilePageTabs extends StatelessWidget {
                   Icon(
                     leadingIcon , color: Colors.black,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 12,
                   ),
                   Text(text),
                 ],
               ),
-              Icon(
+              const Icon(
                 CupertinoIcons.chevron_forward
                ,
                 size: 19,
